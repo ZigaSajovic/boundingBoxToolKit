@@ -4,13 +4,13 @@ Ground Truth Affine Transformations for the VOT 2016 Challenge
 Repository contains ground truth affine transformation matrices for the [VOT2016](http://www.votchallenge.net/vot2016/dataset.html) Challenge bounding boxes. The transformations are to be used with normalized coordinates (on the interval [-1, 1]).
 
 ## Code
-The code used to produce the transformations from the original dataset can be found in [transformVot.py](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/transformVOT.py).
+The code used to produce the transformations matrices from the original dataset can be found in [transformVot.py](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/transformVOT.py).
 
 ### Transform your own dataSet
 To transform your own dataSet, it is to be formated like VOT is, ie. the script expects:
 * root contains ```list.txt``` listing the relevant directories
 * each directory contains ```groundtruth.txt```, where each line represents a bounding box
-	* format of line: ```x1,y1,x2,y2,x3,y3,x4,y4```
+	* expected line format: ```x1,y1,x2,y2,x3,y3,x4,y4```
 
 
 
