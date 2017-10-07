@@ -1,5 +1,4 @@
 import numpy as np
-import scipy
 
 def transformationMatrix(imXs, bBXs):
 	ptsN = len(imXs)
@@ -7,11 +6,11 @@ def transformationMatrix(imXs, bBXs):
 	A = np.concatenate((np.stack([X, Y, I, O, O, O], axis=1),
 						np.stack([O, O, O, X, Y, I], axis=1)), axis=0)
 	b = np.concatenate((U, V), axis=0)
-	p = scipy.linalg.lstsq(A, b)[0].squeeze()
+	p = np.linalg.lstsq(A, b)[0].squeeze()
 	return np.array([[p[0], p[1], p[2]], [p[3], p[4], p[5]], [0, 0, 1]], dtype=np.float32)
 
 def normalizeBbox(bBox, shape):
-	nBbox=np.array(bBox)/(shape[1],shape[0])-1
+	nBbox=2*np.array(bBox)/(shape[1],shape[0])-1
 	return nBbox
 
 def getTransMat(bBox, shape):
@@ -26,8 +25,8 @@ def sampleGrid(transformation, img, shapeOut):
 	yt=y.flatten()
 	toMap=np.stack([xt,yt,np.ones_like(xt)],axis=0)
 	X,Y,_=transformation.dot(toMap)
-	x0=(X+1)*shape[1]
-	y0=(Y+1)*shape[0]
+	x0=(X+1)*shape[1]/2
+	y0=(Y+1)*shape[0]/2
 
 	x=x0
 	y=y0
