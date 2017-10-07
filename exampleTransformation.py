@@ -11,9 +11,7 @@ line in the bag/groundtruthAffine.txt
 """
 
 trans=np.array\
-	([[ 0.10850521, -0.04353646, -0.23915105],\
- 	[0.08391666, 0.10006944, -0.45945832],\
- 	[ 0.,          0.,         1.        ]])
+	([0.21701,-0.0870729,0.521698,0.167833,0.200139,0.0810833,0.0,0.0,1.0]).reshape((3,3))
 Im=misc.imread("exampleBag.jpg")
 bBox1=sampleGrid(trans, Im, (80,80))
 bBox2=sampleGrid(trans, Im, (60,104))
