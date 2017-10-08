@@ -26,6 +26,18 @@ python3 transformVOT.py [-i VOTsetPath] [-o outputDirectoryPath] [-r ]
   -r, --reorient        Should it reorient the boundingBoxes ->
                         meaning: align bBox of frame(t) with bBox of frame(t-1)
 ```
+### ReOrienting the bounding box vertices
+
+Let the *red* dots stand for the vertices of the bounding box in the frame at time ```t-1``` (frame(t-1)), and the *blue* dots for the vertices of the bounding box in the frame at time ```t``` (frame(t)). The number by the vertex signals its position in the list.
+
+In the original VOT set (bellow: frame(1) and frame(2) of example ```/ball```), we see that the bounding boxes in consecutive frames do not match in orientation.
+
+![Before](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/reorderBefore.png)
+
+By running the script with the flag ```-r```, this is fixed, as shown by the vertex ordering bellow.
+
+![After](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/reorderAfter.png)
+
 ### Example of affine bounding box sampling
 
 ![exampleImage](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/example.png)
