@@ -42,8 +42,6 @@ By running the script with the flag ```-r```, this is fixed, as shown by the ver
 
 ![exampleGif](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/example.gif)
 
-![exampleImage](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/example.png)
-
-The code used to produce the image can be found in [exampleTransformation.py](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/exampleTransformation.py).
+The code used to produce the image can be found in [makeGif.py](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/makeGif.py).
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">affineVOTbBox</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://si.linkedin.com/in/zigasajovic" property="cc:attributionName" rel="cc:attributionURL">Žiga Sajovic</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
