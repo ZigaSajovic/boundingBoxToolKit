@@ -15,7 +15,7 @@ To transform your own dataSet, it is to be formated like VOT is, ie. the script 
 
 
 ```python
-python3 transformVOT.py [-i VOTsetPath] [-o outputDirectoryPath]
+python3 transformVOT.py [-i VOTsetPath] [-o outputDirectoryPath] [-r ]
 ```
 ### Example of affine bounding box sampling
 
