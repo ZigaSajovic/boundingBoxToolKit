@@ -1,7 +1,7 @@
 # affineVOTbBox
-Ground Truth Affine Transformations for the VOT 2016 Challenge; corrected, consistent boundingBox orientation through time
+Ground Truth Affine Transformations for the VOT 2016 Challenge; consistent boundingBox orientation through time
 
-Repository contains ground truth affine transformation matrices for the [VOT2016](http://www.votchallenge.net/vot2016/dataset.html) Challenge bounding boxes.The transformations are to be used with normalized coordinates (on the interval [-1, 1]). It also contains *corrected* bounding boxes with consistent orientation through time; see ```ReOrienting the bounding box vertices``` bellow.
+Repository contains ground truth affine transformation matrices for the [VOT2016](http://www.votchallenge.net/vot2016/dataset.html) Challenge bounding boxes.The transformations are to be used with normalized coordinates (on the interval [-1, 1]). It also contains bounding boxes with *consistent orientation* through time; see ```ReOrienting the bounding box vertices``` bellow.
 
 ## Code
 The code used to produce the transformations matrices from the original dataset can be found in [transformVot.py](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/transformVOT.py).
