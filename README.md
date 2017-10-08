@@ -23,7 +23,8 @@ python3 transformVOT.py [-i VOTsetPath] [-o outputDirectoryPath] [-r ]
                         Directory of VOT set
   -o DIRECTORY, --destinationDir DIRECTORY
                         Directory for output file set
-  -r, --reorient        Should it reorient the boundingBoxes
+  -r, --reorient        Should it reorient the boundingBoxes ->
+                        meaning: align bBox of frame(t) with bBox of frame(t-1)
 ```
 ### Example of affine bounding box sampling
 
