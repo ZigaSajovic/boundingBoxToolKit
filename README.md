@@ -28,9 +28,9 @@ python3 transformVOT.py [-i VOTsetPath] [-o outputDirectoryPath] [-r ]
 ```
 ### ReOrienting the bounding box vertices
 
-Let the *red* dots stand for the vertices of the bounding box in the frame at time ```t-1``` (frame(t-1)), and the *blue* dots for the vertices of the bounding box in the frame at time ```t``` (frame(t)). The number by the vertex signals its position in the list.
+Let the ```red``` dots stand for the vertices of the bounding box in the frame at time *t-1* (```frame(t-1)```), and the ```blue``` dots for the vertices of the bounding box in the frame at time *t* (```frame(t)```). The number by the vertex signals its position in the list.
 
-In the original VOT set (bellow: frame(1) and frame(2) of example ```/ball```), we see that the bounding boxes in consecutive frames do not match in orientation.
+In the original VOT set (bellow: frame(1) and frame(2) of example ```/bag```), we see that the bounding boxes in consecutive frames do not match in orientation.
 
 ![Before](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/reorderBefore.png)
 
