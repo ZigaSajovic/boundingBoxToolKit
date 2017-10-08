@@ -40,6 +40,8 @@ By running the script with the flag ```-r```, this is fixed, as shown by the ver
 
 ### Example of affine bounding box sampling
 
+![exampleGif](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/example.gif)
+
 ![exampleImage](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/example.png)
 
 The code used to produce the image can be found in [exampleTransformation.py](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/exampleTransformation.py).
