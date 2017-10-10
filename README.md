@@ -4,7 +4,7 @@ Ground Truth Affine Transformations for the VOT 2016 Challenge; consistent bound
 Repository contains ground truth affine transformation matrices for the [VOT2016](http://www.votchallenge.net/vot2016/dataset.html) Challenge bounding boxes.The transformations are to be used with normalized coordinates (on the interval [-1, 1]). It also contains bounding boxes with *consistent orientation* through time; see ```ReOrienting the bounding box vertices``` bellow.
 
 ## Code
-The code used to produce the transformations matrices from the original dataset can be found in [transformVot.py](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/transformVOT.py).
+The code used to produce the transformations matrices from the original dataset can be found in [bBoxTransform.py](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/bBoxTransform.py).
 
 ### Transform your own dataSet
 To transform your own dataSet, it is to be formated like VOT is, ie. the script expects:
@@ -15,16 +15,20 @@ To transform your own dataSet, it is to be formated like VOT is, ie. the script 
 
 
 ```python
-python3 transformVOT.py [-i VOTsetPath] [-o outputDirectoryPath] [-r ]
+python3 bBoxTransform.py [-i VOTsetPath] [-d outputDirectoryPath] [-c CONTEXT FACTOR] [-r ] [-a]
 ```
 ```
  -h, --help            show this help message and exit
   -i DIRECTORY, --sourceDir DIRECTORY
                         Directory of VOT set
-  -o DIRECTORY, --destinationDir DIRECTORY
+  -d DIRECTORY, --destinationDir DIRECTORY
                         Directory for output file set
-  -r, --reorient        Should it reorient the boundingBoxes ->
-                        meaning: align bBox of frame(t) with bBox of frame(t-1)
+  -c CONTEXT FACTOR, --addContext CONTEXT FACTOR
+                        Scaling factor for the bBox, used to add context
+  -r, --reorient        Reorient the boundingBoxes to have consistent
+                        orientation through time.
+  -a, --affine          Produce the matrix for affine transformation into the
+                        boundingBox.
 ```
 ### ReOrienting the bounding box vertices
 
@@ -38,7 +42,13 @@ By running the script with the flag ```-r```, this is fixed, as shown by the ver
 
 ![After](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/reorderAfter.png)
 
-### Example of affine bounding box sampling
+### Example of affine bounding box sampling with context 1.5
+
+The following is the result of running the script with flags
+
+```python
+python bBoxTransform.py -c 1.5 -r -a
+```
 
 ![exampleGif](https://github.com/ZigaSajovic/affineVOTbBox/blob/master/example.gif)
 
