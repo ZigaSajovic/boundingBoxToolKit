@@ -15,15 +15,19 @@ To transform your own dataSet, it is to be formated like VOT is, ie. the script 
 
 
 ```python
-python3 bBoxTransform.py [-i VOTsetPath] [-d outputDirectoryPath] [-c CONTEXT FACTOR] [-r ] [-a]
+python3 bBoxTransform.py [-h] [-i DIRECTORY] [-d DIRECTORY]
+                        [-s resizeX,resizeY] [-c CONTEXTFACTOR] [-r] [-a]
+
 ```
 ```
- -h, --help            show this help message and exit
+  -h, --help            show this help message and exit
   -i DIRECTORY, --sourceDir DIRECTORY
                         Directory of VOT set
   -d DIRECTORY, --destinationDir DIRECTORY
                         Directory for output file set
-  -c CONTEXT FACTOR, --addContext CONTEXT FACTOR
+  -s resizeX,resizeY, --resize resizeX,resizeY
+                        Resize all images and bBoxes to resizeX,resizeY
+  -c CONTEXTFACTOR, --addContext CONTEXTFACTOR
                         Scaling factor for the bBox, used to add context
   -r, --reorient        Reorient the boundingBoxes to have consistent
                         orientation through time.
